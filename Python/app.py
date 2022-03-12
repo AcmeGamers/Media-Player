@@ -23,12 +23,12 @@ import os
 #########################
 ## Basic Configuration ##
 #########################
-app_name = 'music player'
+app_name = 'Music Player'
 
 
 root = Tk()
 root.title(app_name)
-root.geometry('500x500')
+root.geometry('300x300')
 
 
 def playsong():
@@ -48,8 +48,8 @@ def resumesong():
 
 
 mixer.init()
-playlist = Listbox(root, bg='green')
-playlist.grid(columnspan=3)
+playlist = Listbox(root, width=50, height=10)
+playlist.grid(columnspan=4, pady=10)
 os.chdir(os.getcwd() + '\\Python\\songs')
 song = os.listdir()
 for s in song:
